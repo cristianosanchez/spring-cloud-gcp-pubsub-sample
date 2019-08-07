@@ -1,0 +1,13 @@
+logging.level:
+  org.springframework.cloud.gcp.pubsub: debug
+  com.google.cloud.pubsub.v1: debug
+
+spring.cloud.gcp.pubsub:
+  subscriber:
+    executor-threads: 2
+    retry:
+      initial-retry-delay-seconds: 20
+      max-retry-delay-seconds: 40
+      total-timeout-seconds: 2
+      retry-delay-multiplier: 2
+      retry.max-attempts: 10
